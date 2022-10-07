@@ -9,6 +9,7 @@
     />
 
     <div
+      data-bs-toggle="modal" data-bs-target="#exampleModalCenter"
       :id="'div' + todo.id"
       v-if="!editing"
       @click="toggleEditing"
@@ -24,7 +25,7 @@
       class="col-start-2 col-span-4"
     />
 
-    <button @click="deleteTodo(todo.id)" class="btn red">Delete</button>
+    <button @click="deleteTodo(todo.id)" class="btn red" >Delete</button>
   </div>
 </template>
 
@@ -34,7 +35,7 @@ import TodoEditVue from "./TodoEdit";
 
 export default {
   components: {
-    TodoEditVue,
+    TodoEditVue
   },
   props: ["todo"],
   data() {
